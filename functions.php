@@ -6,8 +6,6 @@
  * @since okb 1.0
  */
 
-require( get_template_directory() . '/inc/krumo/class.krumo.php' );
-
 if ( ! function_exists( 'okb_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -21,6 +19,11 @@ if ( ! function_exists( 'okb_setup' ) ):
 function okb_setup() {
 
 	/**
+	 * Improved var_dump. Usage krumo($obj);
+	 */
+  require( get_template_directory() . '/inc/krumo/class.krumo.php' );
+
+	/**
 	 * Custom template tags for this theme.
 	 */
 	require( get_template_directory() . '/inc/template-tags.php' );
@@ -28,7 +31,7 @@ function okb_setup() {
 	/**
 	 * Custom helpers for this theme.
 	 */
-	require( get_template_directory() . '/inc/template-tags.php' );
+	require( get_template_directory() . '/inc/helpers.php' );
 
 	/**
 	 * Site Customizations
